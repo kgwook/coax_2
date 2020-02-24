@@ -14,7 +14,8 @@
 #
 
 sh /etc/init.d/rc.mc_defaults
-set MIXER coax
+set MIXER testversion2
+
 
 if [ $AUTOCNF = yes ]
 then
@@ -46,9 +47,14 @@ then
 	param set RTL_DESCEND_ALT 10
 fi
 
+
+
+
+
 # This is the gimbal pass mixer
 set MIXER_AUX pass
 
 # use PWM parameters for throttle channel
-set PWM_AUX_OUT 12345
 set PWM_OUT 45
+
+

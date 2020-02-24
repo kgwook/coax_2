@@ -1,0 +1,16 @@
+<launch>
+    <arg name="mavros_transformation" default="0" />   
+    <arg name="world_path" default="$(find simulation_environment)/sim/map/test.world" />  
+    <arg name="model" default="testversion11" />
+
+    <param name="resolution" value="0.05" />
+
+
+    <param name="use_sim_time" value="true" /> 
+
+    <!-- Mavros and Sitl -->
+    <include file="$(find simulation_environment)/launch/mavros_sitl.launch" >
+        <arg name="world_path" value="$(arg world_path)" /> 
+        <arg name="model" value="$(arg model)" />
+    </include>
+</launch>
